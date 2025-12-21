@@ -9,7 +9,7 @@ The IoT integration is powered by the Blynk platform, which enables the test ben
 ## Purpose of the Project
 The goal of this analyzer is to provide a comprehensive health and performance profile for motors that operate at extreme speeds.
 
-* **Efficiency Mapping**: It calculates the ratio between electrical power input and mechanical thrust output to find the motor's "sweet spot".
+* **Efficiency Mapping**: It calculates the ratio between electrical power input and mechanical thrust output to find the motor's "peak efficiency".
 * **Vibration Diagnostics**: Using FFT analysis, the system identifies peak vibration frequencies to prevent mechanical resonance failures.
 * **Safety Automation**: It acts as a digital watchdog, automatically cutting power via a relay if current or vibration levels become dangerous.
 * **Remote Testing**: By using IoT, you can monitor high-RPM tests from a safe distance, reducing the risk associated with mechanical failures during testing.
@@ -48,7 +48,7 @@ The system follows a specific logic flow to provide accurate diagnostics while t
 2. **Vibration Analysis**: The MPU6050 collects 128 samples of acceleration. The code then runs a Fast Fourier Transform (FFT) to identify the "Major Peak," which represents the primary vibration frequency of the motor.
 3. **Aerodynamics**: By reading air pressure and comparing it to ambient density, the system calculates air pressure.
 4. **Efficiency Math**: The code calculates efficiency by comparing mechanical output ($Thrust \times Velocity$) against electrical input ($Voltage \times Current$).
-5. **Active Safety**: The system continuously checks if the vibration exceeds **6000 Hz** or if the current exceeds **5 Amps**. If these limits are crossed, the relay is immediately triggered to "Danger" mode, shutting down the motor.
+5. **Active Safety**: The system continuously checks if the vibration exceeds **6000 Hz** or if the current exceeds **5 Amps** (can be changed accordingly). If these limits are crossed, the relay is immediately triggered to "Danger" mode, shutting down the motor.
 
 ---
 
