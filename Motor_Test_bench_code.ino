@@ -298,8 +298,7 @@ void loop() {
   // 7. SAFETY
   bool danger = (peakFrequency > SAFETY_VIB_LIMIT_HZ) || (current_amps > SAFETY_CURR_LIMIT_A);
   digitalWrite(RELAY_PIN, danger ? HIGH : LOW);
-
-  // 8. UPDATE BLYNK
+  
   blynk_weight = load_weight_g;
   blynk_rpm = rpm;
   blynk_vib = peakFrequency;
@@ -307,8 +306,7 @@ void loop() {
   blynk_pressure = kPa;           
   blynk_eff = efficiency_percent;
   blynk_estop = danger ? 1 : 0;   
-
-  // 9. DEBUG
+  
   static unsigned long lastPrint = 0;
   if (millis() - lastPrint > 500) {
     lastPrint = millis();
