@@ -1,4 +1,4 @@
-# High RPM Motor Test Bench
+# High-RPM Motor Telemetry and Safety Test Bench
 ---
 
 ## Overview
