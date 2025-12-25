@@ -6,6 +6,13 @@ The Motor Test Bench  is a high-precision diagnostic station built to capture re
 
 The IoT integration is powered by the Blynk platform, which enables the test bench to function as a remote-access. The ESP32 pushes live sensor data across several virtual pins, including vertical weight from the load cell, motor RPM, peak vibration frequency, and current consumption. This remote monitoring capability is a vital safety feature, allowing the user to observe performance metrics and efficiency maps from a safe distance during high-stress testing. Furthermore, the system is designed with auto-retry logic that checks the status of sensors like the MPU6050 every five seconds; if a sensor fails due to high vibrations or electrical noise, the firmware attempts to re-initialize it automatically to ensure continuous data logging
 
+<p align="center">
+  <img src="Front view.jpeg" width="45%" alt="Front View">
+</p>
+<p align="center">
+<em> Front View</em>
+</p>
+
 ## Purpose of the Project
 The goal of this analyzer is to provide a comprehensive health and performance profile for motors that operate at extreme speeds.
 
@@ -28,6 +35,13 @@ The goal of this analyzer is to provide a comprehensive health and performance p
 | **Relay Module** | 1 | The electronic "E-Stop" that disconnects power during safety triggers. |
 
 ---
+
+<p align="center">
+  <img src="Top-Side view.jpeg" width="45%" alt="Top-Side view">
+</p>
+<p align="center">
+<em> Top-Side view</em>
+</p>
 
 ## Connections
 The wiring is designed to separate high-speed logic from the power-hungry motor components to ensure data integrity.
@@ -52,6 +66,13 @@ The system follows a specific logic flow to provide accurate diagnostics while t
 
 ---
 
+<p align="center">
+  <img src="Anchor Point.jpeg" width="45%" alt="Anchor Point">
+</p>
+<p align="center">
+<em> Anchor Point</em>
+</p>
+
 ## Blynk IoT Connection
 This project is fully integrated with **Blynk IoT** for remote data visualization.
 
@@ -60,6 +81,13 @@ This project is fully integrated with **Blynk IoT** for remote data visualizatio
 * **Sensor Resilience**: The firmware includes an auto-retry feature. If a sensor like the MPU6050 fails at startup, the system will attempt to reconnect to it every 5 seconds without needing a full reboot.
 
 ---
+
+<p align="center">
+  <img src="Blynk dash Board.PNG" width="45%" alt="Blynk dash Board">
+</p>
+<p align="center">
+<em> Blynk dash Board</em>
+</p>
 
 ## Conclusion
 The **Motor Test Bench** is a robust tool that bridges the gap between simple motor testing and professional analysis. By focusing on a vertical mounting setup, it provides unique insights into thrust-to-weight ratios and axial vibration that horizontal benches often miss. With integrated safety protocols and a real-time IoT dashboard, this project ensures that high-speed motor testing is not only informative but also significantly safer.
